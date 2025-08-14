@@ -13,8 +13,8 @@ This guide will help you set up the automated Figma to React Native screen gener
 
 ### 1. Clone this project and Navigate to it
 ```bash
-git clone https://github.com/bbalakriz/figma-screen-gen
-cd figma-screen-gen
+git clone https://github.com/bbalakriz/figma-rn-screen-generator
+cd figma-rn-screen-generator
 ```
 
 ### 2. Configure Figma Personal Access Token (PAT)
