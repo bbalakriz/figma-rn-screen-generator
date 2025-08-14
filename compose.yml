@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  figma-mcp-server:
+    # change tag below to match your machine architecture: use ':1.0-amd64' for AMD64, or ':1.0-arm64' for ARM64
+    image: quay.io/balki404/figma-mcp-server:1.0-amd64
+    container_name: figma-mcp-server
+    environment:
+      # set Figma API key here or use .env file
+      - FIGMA_API_KEY=${FIGMA_API_KEY}
+    restart: unless-stopped
+    ports:
+      - "3333:3333"
+    networks:
+      - figma-mcp-network
+
+networks:
+  figma-mcp-network:
+    driver: bridge
+
+# To use this with an environment file, create a .env file with:
+# FIGMA_API_KEY=your_actual_figma_api_key_here
